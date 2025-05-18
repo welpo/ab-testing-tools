@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óscar’s A/B Testing Toolkit</title>
+    <meta name="description" content="A collection of tools for A/B testing and experimentation">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Colours -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#4a5568">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#334652">
+
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self'
+        style-src 'self';
+        connect-src 'self';
+        img-src 'self' data:;
+        font-src 'self' data:;
+        manifest-src 'self';
+        worker-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        ">
+
+    <link rel="stylesheet" href="styles.css?h=fc3cb105">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header-container">
+            <div class="main-robot">
+                <div class="robot">
+                    <div class="robot-face">
+                        <div class="robot-eyes">
+                            <div class="robot-eye" id="leftEye"></div>
+                            <div class="robot-eye" id="rightEye"></div>
+                        </div>
+                        <div class="robot-mouth"></div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="page-title">Óscar’s A/B Testing Toolkit</h1>
+            <p class="page-subtitle">Free (as in <i>libre</i> and <i>gratis</i>) tools to help you run better experiments.</p>
+        </header>
+
+        <main>
+            <div class="tools-grid">
+                <a href="https://calculator.osc.garden" class="tool-card">
+                    <div class="tool-header">
+                        <h2 class="tool-title">Sample Size/Duration Calculator</h2>
+                    </div>
+                    <div class="tool-content">
+                        <p class="tool-description">Plan your experiment duration and sample size. Get accurate estimates based on your traffic, conversion rate, and target detectable improvement.</p>
+                        <div class="tool-preview">
+                            <div class="results-grid">
+                                <div class="result-card">
+                                    <h3 class="result-title">Duration</h3>
+                                    <p class="result-value">14</p>
+                                    <p class="result-subtitle">days</p>
+                                </div>
+                                <div class="result-card">
+                                    <h3 class="result-title">Sample size</h3>
+                                    <p class="result-value">9,254</p>
+                                    <p class="result-subtitle">per variant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="https://srm.osc.garden" class="tool-card">
+                    <div class="tool-header">
+                        <h2 class="tool-title">SRM Calculator</h2>
+                    </div>
+                    <div class="tool-content">
+                        <p class="tool-description">Check if your A/B test traffic was correctly distributed. Detect Sample Ratio Mismatch that could invalidate your experiment results.</p>
+                        <div class="tool-preview">
+                            <div class="verdict no-mismatch">No significant Sample Ratio Mismatch</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://stop-early-stopping.osc.garden" class="tool-card">
+                    <div class="tool-header">
+                        <h2 class="tool-title">Stop Early Stopping</h2>
+                    </div>
+                    <div class="tool-content">
+                        <p class="tool-description">Visualise why peeking at significance levels during experiments drastically increases your false positive rate.<br>Let your tests cook!</p>
+                        <div class="tool-preview">
+                            <div class="dots-container">
+                                <!-- Row 1 -->
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+
+                                <!-- Row 2 -->
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+
+                                <!-- Row 3 -->
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+
+                                <!-- Row 4 -->
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot red"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+                                <div class="dot green"></div>
+
+                                <div class="desktop-only">
+                                    <!-- Row 5 -->
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+
+                                    <!-- Row 6 -->
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot green"></div>
+                                    <div class="dot red"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <footer class="app-footer" role="contentinfo">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span>Made with <span class="heart">♥</span> by <a href="https://osc.garden" class="footer-link" rel="author" lang="es">Óscar</a></span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="robot.js?h=9a8acb05"></script>
+</body>
+</html>
