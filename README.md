@@ -17,9 +17,9 @@ A landing page for my free (as in freedom) experimentation tools.
 
 ## Featured tools
 
-- **[A/B Test Sample Size & Duration Calculator](https://calculator.osc.garden)**: Plan experiment duration and sample size based on traffic, conversion rates, and target improvements.
-- **[Sample Ratio Mismatch Calculator](https://srm.osc.garden)**: Check if A/B test traffic was correctly distributed to detect sample ratio mismatch (SRM) that could invalidate results.
-- **[Stop Early Stopping](https://stop-early-stopping.osc.garden)**: Visualise why peeking at significance levels during experiments drastically increases false positive rates.
+- **[A/B Test Sample Size & Duration Calculator](https://calculator.osc.garden)**: Plan experiment duration and sample size.
+- **[Sample Ratio Mismatch Calculator](https://srm.osc.garden)**: Check if A/B test traffic was correctly distributed.
+- **[Stop Early Stopping](https://stop-early-stopping.osc.garden)**: Visualise why peeking at significance levels during experiments is a bad idea.
 
 ## Contributing
 
